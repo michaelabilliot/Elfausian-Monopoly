@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elfausian Finance - Leading the future of global financial technology and services">
+    <title>Elfausian Finance - Revolutionizing Global Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/finance.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="Home">
+                    <h1>Elfausian</h1>
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="music.html" aria-label="Music division">Music</a></li>
+                <li><a href="shopping.html" aria-label="Shopping division">Shopping</a></li>
+                <li><a href="construction.html" aria-label="Construction division">Construction</a></li>
+                <li><a href="technology.html" aria-label="Technology division">Technology</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Finance Hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2 class="hero-title">Revolutionizing Global Finance</h2>
+                <p class="hero-subtitle">Pioneering the future of financial technology and services</p>
+                <div class="live-ticker">
+                    <div class="ticker-container" id="stockTicker">
+                        <!-- Stock ticker will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="financial-dashboard" aria-label="Financial Dashboard">
+            <h2>Financial Performance</h2>
+            <div class="dashboard-grid">
+                <div class="chart-container">
+                    <canvas id="revenueChart" aria-label="Revenue Growth Chart" role="img"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="marketShareChart" aria-label="Market Share Chart" role="img"></canvas>
+                </div>
+                <div class="metrics-container">
+                    <!-- Financial metrics will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="investor-relations" aria-label="Investor Relations">
+            <h2>Investor Relations</h2>
+            <div class="press-releases">
+                <!-- Press releases will be populated by JavaScript -->
+            </div>
+            <div class="financial-reports">
+                <h3>Latest Financial Reports</h3>
+                <div class="reports-grid">
+                    <!-- Financial reports will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="services" aria-label="Financial Services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <!-- Service cards will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+                    <a href="#" aria-label="Follow us on LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/finance.js"></script>
+</body>
+</html>

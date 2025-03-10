@@ -1,0 +1,114 @@
+.technology-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../assets/tech-hero.jpg');
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.technology-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.1), rgba(128, 0, 255, 0.1));
+    animation: techGlow 8s infinite;
+}
+
+@keyframes techGlow {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
+}
+
+.innovation-showcase {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #000, #111);
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.interactive-demos {
+    padding: 4rem 2rem;
+    background: #111;
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.industry-highlights {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #111, #000);
+}
+
+.highlights-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+}
+
+.highlight-card h3 {
+    color: #fff;
+    font-family: 'Clash Display', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.achievement-list {
+    list-style: none;
+    padding: 0;
+}
+
+.achievement-list li {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.achievement-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #00ffff;
+}
+
+@media (max-width: 768px) {
+    .highlights-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight-card {
+        padding: 1.5rem;
+    }
+}

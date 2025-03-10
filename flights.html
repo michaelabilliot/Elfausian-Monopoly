@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elfausian Flights - Experience the future of air travel with our revolutionary aviation services">
+    <title>Elfausian Flights - Future of Aviation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/flights.css">
+</head>
+<body>
+    <header class="main-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="Home">
+                    <h1>Elfausian</h1>
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="music.html" aria-label="Music division">Music</a></li>
+                <li><a href="shopping.html" aria-label="Shopping division">Shopping</a></li>
+                <li><a href="flights.html" aria-label="Flights division" class="active">Flights</a></li>
+                <li><a href="construction.html" aria-label="Construction division">Construction</a></li>
+                <li><a href="technology.html" aria-label="Technology division">Technology</a></li>
+                <li><a href="finance.html" aria-label="Finance division">Finance</a></li>
+                <li><a href="entertainment.html" aria-label="Entertainment division">Entertainment</a></li>
+                <li><a href="healthcare.html" aria-label="Healthcare division">Healthcare</a></li>
+                <li><a href="realestate.html" aria-label="Real Estate division">Real Estate</a></li>
+                <li><a href="energy.html" aria-label="Energy division">Energy</a></li>
+                <li><a href="automotive.html" aria-label="Automotive division">Automotive</a></li>
+                <li><a href="education.html" aria-label="Education division">Education</a></li>
+                <li><a href="hospitality.html" aria-label="Hospitality division">Hospitality</a></li>
+                <li><a href="hub.html" aria-label="Business Hub">Business Hub</a></li>
+                <li><a href="about.html" aria-label="About Us">About</a></li>
+                <li><a href="contact.html" aria-label="Contact Us">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="hero flights-hero" aria-label="Hero section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2 class="hero-title">The Future of Aviation</h2>
+                <p class="hero-subtitle">Experience seamless travel across the globe with Elfausian's revolutionary flight network</p>
+            </div>
+        </section>
+
+        <section class="flight-search" aria-label="Flight search">
+            <div class="search-container">
+                <h2>Find Your Flight</h2>
+                <form class="flight-search-form" aria-label="Flight search form (demonstration only)">
+                    <div class="form-group">
+                        <label for="origin">From</label>
+                        <input type="text" id="origin" placeholder="New York (JFK)" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">To</label>
+                        <input type="text" id="destination" placeholder="Tokyo (HND)" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="departure">Departure</label>
+                        <input type="date" id="departure" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="return">Return</label>
+                        <input type="date" id="return" disabled>
+                    </div>
+                    <button type="button" class="search-button" disabled>Search Flights</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="featured-destinations" aria-label="Featured destinations">
+            <h2>Featured Destinations</h2>
+            <div class="destinations-grid">
+                <!-- Destinations will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="interactive-map" aria-label="Interactive destination map">
+            <h2>Explore Our Routes</h2>
+            <div class="map-container">
+                <div class="map-overlay">
+                    <!-- Map points will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+                    <a href="#" aria-label="Follow us on LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elfausian Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/flights.js"></script>
+</body>
+</html>

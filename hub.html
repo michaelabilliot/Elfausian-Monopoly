@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elfausian Business Hub - Comprehensive insights across all our business divisions">
+    <title>Elfausian Business Hub - Performance Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/hub.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-logo">
+                <a href="index.html" aria-label="Home">
+                    <h1>Elfausian</h1>
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="music.html" aria-label="Music division">Music</a></li>
+                <li><a href="shopping.html" aria-label="Shopping division">Shopping</a></li>
+                <li><a href="flights.html" aria-label="Flights division">Flights</a></li>
+                <li><a href="construction.html" aria-label="Construction division">Construction</a></li>
+                <li><a href="technology.html" aria-label="Technology division">Technology</a></li>
+                <li><a href="finance.html" aria-label="Finance division">Finance</a></li>
+                <li><a href="entertainment.html" aria-label="Entertainment division">Entertainment</a></li>
+                <li><a href="healthcare.html" aria-label="Healthcare division">Healthcare</a></li>
+                <li><a href="realestate.html" aria-label="Real Estate division">Real Estate</a></li>
+                <li><a href="energy.html" aria-label="Energy division">Energy</a></li>
+                <li><a href="automotive.html" aria-label="Automotive division">Automotive</a></li>
+                <li><a href="education.html" aria-label="Education division">Education</a></li>
+                <li><a href="hospitality.html" aria-label="Hospitality division">Hospitality</a></li>
+                <li><a href="hub.html" aria-label="Business Hub" class="active">Business Hub</a></li>
+                <li><a href="about.html" aria-label="About Us">About</a></li>
+                <li><a href="contact.html" aria-label="Contact Us">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="dashboard-header" aria-label="Dashboard Overview">
+            <h2>Business Performance Dashboard</h2>
+            <div class="date-range">
+                <span>Last Updated: <time datetime="2024-01-15">January 15, 2024</time></span>
+            </div>
+        </section>
+
+        <section class="key-metrics-grid" aria-label="Key Performance Metrics">
+            <div class="metric-card revenue">
+                <h3>Total Revenue</h3>
+                <p class="metric-value">$157.8B</p>
+                <p class="metric-change positive">+12.3% YoY</p>
+                <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="metric-card market-cap">
+                <h3>Market Cap</h3>
+                <p class="metric-value">$892.4B</p>
+                <p class="metric-change positive">+8.7% QoQ</p>
+                <canvas id="marketCapChart"></canvas>
+            </div>
+            <div class="metric-card employees">
+                <h3>Global Employees</h3>
+                <p class="metric-value">247,890</p>
+                <p class="metric-change positive">+5.2% YoY</p>
+                <canvas id="employeeChart"></canvas>
+            </div>
+            <div class="metric-card innovation">
+                <h3>Innovation Index</h3>
+                <p class="metric-value">94.3</p>
+                <p class="metric-change positive">+2.1 pts</p>
+                <canvas id="innovationChart"></canvas>
+            </div>
+        </section>
+
+        <section class="sector-performance" aria-label="Sector Performance">
+            <h2>Sector Performance</h2>
+            <div class="sector-grid">
+                <div class="sector-nav">
+                    <!-- Sector navigation will be populated by JavaScript -->
+                </div>
+                <div class="sector-details">
+                    <canvas id="sectorPerformanceChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-updates" aria-label="Latest Updates">
+            <h2>Latest Updates</h2>
+            <div class="updates-grid">
+                <article class="update-card press-release">
+                    <h3>Press Release</h3>
+                    <time datetime="2024-01-15">Jan 15, 2024</time>
+                    <h4>Elfausian Announces Revolutionary Green Energy Initiative</h4>
+                    <p>$10B investment in renewable energy infrastructure across global operations...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                <article class="update-card investor-news">
+                    <h3>Investor News</h3>
+                    <time datetime="2024-01-14">Jan 14, 2024</time>
+                    <h4>Q4 2023 Financial Results Exceed Expectations</h4>
+                    <p>Record-breaking quarter shows strong growth across all sectors...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+                <article class="update-card partnership">
+                    <h3>Partnership Announcement</h3>
+                    <time datetime="2024-01-13">Jan 13, 2024</time>
+                    <h4>Strategic Alliance with Global Tech Leaders</h4>
+                    <p>Collaboration aims to accelerate AI innovation in key markets...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="interactive-widgets" aria-label="Interactive Analysis Tools">
+            <h2>Analysis Tools</h2>
+            <div class="widgets-grid">
+                <div class="widget revenue-analyzer">
+                    <h3>Revenue Analyzer</h3>
+                    <canvas id="revenueAnalyzerChart"></canvas>
+                    <div class="widget-controls">
+                        <select id="revenueTimeframe" aria-label="Select timeframe">
+                            <option value="quarterly">Quarterly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="widget market-share">
+                    <h3>Market Share Analysis</h3>
+                    <canvas id="marketShareChart"></canvas>
+                    <div class="widget-controls">
+                        <select id="marketRegion" aria-label="Select region">
+                            <option value="global">Global</option>
+                            <option value="regional">Regional</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="widget growth-metrics">
+                    <h3>Growth Metrics</h3>
+                    <canvas id="growthMetricsChart"></canvas>
+                    <div class="widget-controls">
+                        <select id="growthMetric" aria-label="Select metric">
+                            <option value="revenue">Revenue Growth</option>
+                            <option value="users">User Growth</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+                    <a href="#" aria-label="Follow us on LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="press.html">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Elfausian Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/hub.js"></script>
+</body>
+</html>

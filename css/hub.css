@@ -1,0 +1,198 @@
+/* Business Hub Styles */
+.dashboard-header {
+    padding: 2rem;
+    background: var(--surface-dark);
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.date-range {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Key Metrics Grid */
+.key-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+}
+
+.metric-card {
+    background: var(--surface-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.metric-value {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.metric-change {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.metric-change.positive {
+    color: var(--success);
+}
+
+.metric-change.negative {
+    color: var(--error);
+}
+
+/* Sector Performance */
+.sector-performance {
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.sector-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    background: var(--surface-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.sector-nav {
+    border-right: 1px solid var(--border);
+}
+
+/* News Updates */
+.news-updates {
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.updates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.update-card {
+    background: var(--surface-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.update-card:hover {
+    transform: translateY(-5px);
+}
+
+.update-card h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.update-card time {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.update-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.update-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Interactive Widgets */
+.interactive-widgets {
+    padding: 2rem;
+}
+
+.widgets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.widget {
+    background: var(--surface-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.widget h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.widget-controls {
+    margin-top: 1rem;
+}
+
+.widget-controls select {
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sector-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sector-nav {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .key-metrics-grid,
+    .updates-grid,
+    .widgets-grid {
+        grid-template-columns: 1fr;
+    }
+}

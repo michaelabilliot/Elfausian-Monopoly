@@ -1,0 +1,259 @@
+/* Music Page Specific Styles */
+:root {
+    --player-bg: #2a2929;
+    --player-accent: var(--secondary-accent);
+    --player-text: var(--text-primary);
+    --player-progress: #ed9466;
+}
+
+/* Hero Section */
+.music-hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Featured Artists Section */
+.featured-artists {
+    padding: 6rem 2rem;
+    background-color: var(--primary-bg);
+}
+
+.featured-artists h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.artist-card {
+    position: relative;
+    background: #2a2929;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: translateY(-8px);
+}
+
+.artist-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.artist-info {
+    padding: 1.5rem;
+}
+
+.artist-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.artist-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Custom Music Player */
+.music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--player-bg);
+    padding: 1rem;
+    z-index: 100;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.player-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+.now-playing {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.album-art {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.track-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.track-artist {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: var(--player-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+    color: var(--player-accent);
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--player-progress);
+    width: 30%;
+    transition: width 0.1s linear;
+}
+
+.current-time,
+.duration {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.volume-btn {
+    background: none;
+    border: none;
+    color: var(--player-text);
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.volume-slider {
+    width: 100px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.volume-progress {
+    height: 100%;
+    background-color: var(--player-progress);
+    width: 70%;
+}
+
+/* Industry Shortcuts */
+.industry-shortcuts {
+    padding: 6rem 2rem;
+    background-color: #1a1919;
+}
+
+.industry-shortcuts h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 3rem;
+}
+
+.shortcuts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .player-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .now-playing {
+        justify-content: center;
+    }
+
+    .volume-container {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .artist-card {
+        transform: none;
+    }
+
+    .control-btn:hover {
+        transform: none;
+    }
+}
