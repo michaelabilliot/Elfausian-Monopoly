@@ -20,6 +20,10 @@ function initializeCharts() {
     Chart.defaults.borderColor = '#2a2929';
     Chart.defaults.font.family = "'JetBrains Mono', monospace";
     
+    // Set global Chart.js options to prevent scaling issues
+    Chart.defaults.responsive = true;
+    Chart.defaults.maintainAspectRatio = false;
+    
     // Revenue Chart
     const revenueCtx = document.getElementById('revenueChart').getContext('2d');
     new Chart(revenueCtx, {

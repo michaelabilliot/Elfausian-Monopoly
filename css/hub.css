@@ -18,6 +18,7 @@
     position: relative;
     width: 100%;
     padding-bottom: 2rem;
+    display: block; /* Ensures proper block layout */
 }
 
 /* Dashboard Header */
@@ -393,4 +394,25 @@
     .widgets-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.metric-card canvas, .widget canvas {
+    height: 200px !important; /* Fixed height for all chart canvases */
+    width: 100% !important;
+}
+
+/* Ensure the chart containers have proper dimensions */
+.revenue-analyzer, .market-share, .growth-metrics {
+    height: auto;
+    min-height: 350px;
+}
+
+/* Fix for sector performance chart */
+.sector-details {
+    height: 400px;
+}
+
+/* Ensure the ticker doesn't cause layout shifts */
+.ticker-wrap {
+    height: 60px;
 }
