@@ -296,3 +296,196 @@ a {
     white-space: nowrap;
     border: 0;
 }
+
+
+/* Base Styles and Variables */
+:root {
+    --primary-black: #0a0a0a;
+    --primary-silver: #c0c0c0;
+    --primary-blue: #0a192f;
+    --accent-gold: #ffd700;
+    --accent-red: #8b0000;
+    --gradient-dark: linear-gradient(135deg, var(--primary-black) 0%, var(--primary-blue) 100%);
+    --font-futuristic: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+    --font-mono: 'Share Tech Mono', monospace;
+}
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--gradient-dark);
+    color: var(--primary-silver);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Grid Background Effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(10, 25, 47, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10, 25, 47, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: -1;
+    animation: gridPulse 15s infinite linear;
+}
+
+@keyframes gridPulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
+}
+
+/* Menu Button Styles */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--primary-silver);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+    box-shadow: 0 0 15px var(--accent-gold);
+}
+
+.menu-icon {
+    width: 25px;
+    height: 20px;
+    position: relative;
+}
+
+.menu-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--primary-silver);
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu-icon span:nth-child(2) {
+    top: 9px;
+}
+
+.menu-icon span:nth-child(3) {
+    top: 18px;
+}
+
+/* Navigation Panel Styles */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    border-right: 1px solid var(--primary-silver);
+    z-index: 999;
+    transition: left 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    overflow-y: auto;
+}
+
+.main-nav.active {
+    left: 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(192, 192, 192, 0.3);
+}
+
+.nav-logo {
+    font-family: var(--font-futuristic);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+}
+
+.close-nav {
+    font-size: 2rem;
+    color: var(--primary-silver);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-nav:hover {
+    color: var(--accent-red);
+}
+
+.nav-items {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.nav-items li {
+    margin-bottom: 5px;
+}
+
+.nav-items li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: var(--primary-silver);
+    text-decoration: none;
+    font-family: var(--font-futuristic);
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.nav-items li a:hover {
+    background: rgba(192, 192, 192, 0.1);
+    border-left: 3px solid var(--accent-gold);
+    color: white;
+}
+
+.nav-items li a i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    min-width: 25px;
+    text-align: center;
+}
+
+/* Hover glow effect for icons */
+.nav-items li a:hover i {
+    color: var(--accent-gold);
+    text-shadow: 0 0 10px var(--accent-gold);
+}
